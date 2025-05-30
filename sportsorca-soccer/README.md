@@ -46,14 +46,15 @@ This is a simple React web application that displays a list of upcoming soccer m
      or
     yarn install
 
-3. ### API Key Handling
+3. API Key Handling
 
     The API key is stored directly inside the src/api.js file for simplicity.
 
     To keep your API key secure, the src/api.js file is included in .gitignore and not committed to the repository.
 
     When cloning the repo, you need to create your own src/api.js file with the following content and replace 'YOUR_API_KEY_HERE' with your actual API key:
-
+    
+    ```js
     import axios from 'axios';
 
     const API_KEY = 'YOUR_API_KEY_HERE';  // <-- Replace with your API key
