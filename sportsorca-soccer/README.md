@@ -37,54 +37,54 @@ This is a simple React web application that displays a list of upcoming soccer m
 
 1. Clone the repository
 
-   - ```bash
-   - git clone https://github.com/yourusername/upcoming-soccer-matches.git
-   - cd upcoming-soccer-matches
+   git clone https://github.com/yourusername/upcoming-soccer-matches.git
+   cd upcoming-soccer-matches
 
 2. Install dependencies
 
-    - npm install
-    # or
-    - yarn install
+    npm install
+     or
+    yarn install
 
 3. ### API Key Handling
 
-    - The API key is stored directly inside the src/api.js file for simplicity.
+    The API key is stored directly inside the src/api.js file for simplicity.
 
-    - To keep your API key secure, the src/api.js file is included in .gitignore and not committed to the repository.
+    To keep your API key secure, the src/api.js file is included in .gitignore and not committed to the repository.
 
-    - When cloning the repo, you need to create your own src/api.js file with the following content and replace 'YOUR_API_KEY_HERE' with your actual API key:
+    When cloning the repo, you need to create your own src/api.js file with the following content and replace 'YOUR_API_KEY_HERE' with your actual API key:
 
-        import axios from 'axios';
+    import axios from 'axios';
 
-        const API_KEY = 'YOUR_API_KEY_HERE';  // <-- Replace with your API key
-        const BASE_URL = 'https://v3.football.api-sports.io';
+    const API_KEY = 'YOUR_API_KEY_HERE';  // <-- Replace with your API key
+    const BASE_URL = 'https://v3.football.api-sports.io';
 
-        export const getUpcomingMatches = async () => {
-        try {
-            const response = await axios.get(`${BASE_URL}/fixtures`, {
-            params: {
-                league: 39,
-                season: 2023,
-            },
-            headers: {
-                'x-apisports-key': API_KEY,
-            },
-            });
-            return response.data.response;
-        } catch (error) {
-            console.error('API error:', error.message);
-            return [];
-        }
-        };
+    export const getUpcomingMatches = async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}/fixtures`, {
+        params: {
+            league: 39,
+            season: 2023,
+        },
+        headers: {
+            'x-apisports-key': API_KEY,
+        },
+        });
+        return response.data.response;
+    } catch (error) {
+        console.error('API error:', error.message);
+        return [];
+    }
+    };
+
 
 
 
 4. Start the development server
 
-    - npm start
-    # or
-    - yarn start
+    npm start
+     or
+    yarn start
 
 5. Open http://localhost:3000 in your browser to see the app.
 
@@ -92,9 +92,9 @@ This is a simple React web application that displays a list of upcoming soccer m
 
 ### Usage
 
-   -  The app fetches upcoming Premier League matches and displays them.
+   The app fetches upcoming Premier League matches and displays them.
 
-   -  Each match shows the home team vs away team, and the scheduled date/time in your local timezone.
+   Each match shows the home team vs away team, and the scheduled date/time in your local timezone.
 
 
 ---
